@@ -1,4 +1,5 @@
 const text1 = "wystartował";
+
 const text2 = "wylądował";
 console.log(text1);
 console.log(text2);
