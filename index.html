@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,7 +90,7 @@
           <p>
             Specyficznosc stylow - style mogą być zdefiniowane na wiele sposobów
             (w wielu miejscach):<br />
-            <img src="assets/specyficznosc_stylow1.png" /><br />
+            <img src="assets/specyficznosc_stylow1.png" alt="" /><br />
             Nazywa się to <i>Specyficznością stylów</i> i w oparciu o to
             przeglądarka ustala jaki styl będzie de facto zastosowany jeżeli
             dany element strony podlega pod wiele różnych stylów. <br />
@@ -143,10 +143,10 @@
             ma przewagę nad: <br />
             <code> body .section #main-header { color: red; } </code> <br />
             Wynika to z tej klasyfikacji "medalowej": <br />
-            <img src="assets/specyficznosc_stylow2.png" /> <br />
+            <img src="assets/specyficznosc_stylow2.png" alt="" /> <br />
             W przypadku kiedy specyficzność jest identyczna, wygrywa styl bliżej
             elementu, czyli znajdujący się niżej w pliku style.css: <br />
-            <img src="assets/specyficznosc_stylow3.png" /> <br />
+            <img src="assets/specyficznosc_stylow3.png" alt="" /> <br />
             Podobnie jest w ponizszym przypadku: <br />
             <img src="assets/specyficznosc_stylow4.png" alt="" /><br />
             Dobrą praktyką jest jednak unikanie zagnieżdżeń. Należy raczej
@@ -162,29 +162,37 @@
           <h3>GIT</h3>
           <p>
             <code>git config --global user.name "Piotr Kowalski"</code><br />
-            <code>git config --global user.email kowalskipiotr79@gmail.com</code><br />
+            <code>git config --global user.email kowalskipiotr79@gmail.com</code
+            ><br />
             <code>git config --list</code><br />
             <code>cat ~/.gitconfig </code><br />
             <code>git config --get user.name</code><br />
             <code>cd homepage/</code><br />
-            <code>git init<br />
+            <code>git init </code><br />
             <code>ls -lta</code><br />
             <code>git status </code><br />
             <code>git add main.js </code><br />
-            <code>git status <br />
+            <code>git status </code> <br />
             <code>git add .</code><br />
-            <code>git status <br />
+            <code>git status </code><br />
             <code>git commit -m "initial commit"</code><br />
             <code>git status </code><br />
             <code>gitk </code><br />
-            git lens - rozszerzenie do Visual Studio Code dla git-a </code><br />
+            git lens - rozszerzenie do Visual Studio Code dla git-a <br />
             Łączenie lokalnego repo git-a do zdalnego, utworzonego wcześniej
             ręcznie przez przeglądarkę na githubie: <br />
             <code>
               git remote add origin
               https://github.com/kowalskipiotr79/homepage.git </code
             ><br />
-            <code>git push -u origin master <br /></code>
+            <code>git push -u origin master </code><br />
+            Wypchnięcie zmian na github: <br />
+            <code> git add .</code>
+            <code>git commit -m "kolejny komit... :)"</code>
+            <code>git push</code><br />
+            Jest też polecenie <code>git stage</code>, które wrzuca zmiany jakby
+            do tymczasowego schowka dzięki czemu można np. coś sobie potestować
+            na kodzie a potem przywrócić zmiany ze stage-a itp.
           </p>
         </article>
       </section>
