@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WTF Co ten frontend? Notatki.</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="lekcja1.html">lekcja 1&gt;&gt;</a>
+        <br />
+        <a href="#details">Wiedza w punktach</a>
+      </nav>
+    </header>
+    <main>
+      <header>
+        <h1 style="color: lightcoral;">
+          Piotr Kowalski - Strona-Notatka ze szkolenia WTF Co ten frontend?
+        </h1>
+        <img style="width: 50%;" src="assets/5.png" alt="Obrazek nagłówkowy" />
+      </header>
+
+      <section>
+        <h2>Sekcja powinna miec nagłówek cztli &lt;header&gt;</h2>
+        <article>
+          <h3>Artykuł tez powinien miec nagłówek czyli &lt;header&gt;</h3>
+          <p>
+            Artykuł powinien zawierac paragraf czyli &lt;p&gt;
+          </p>
+          <p>camelCase</p>
+          <p>snake_case</p>
+          <p>kebab-case</p>
+          <p>PascalCase</p>
+          <p>
+            Sekcja &lt;body&gt; można podzielić np na: <br />
+            - sekcję &lt;header&gt; <br />
+            - sekcję &lt;main&gt; <br />
+            - sekcję &lt;footer&gt; <br />
+            Przyjmuje się, że sekcje &lt;header&gt; i &lt;footer&gt; powtarzają
+            się na każdej z podstron. Oczywiście każda sekcja &lt;main&gt; może
+            zawierać własne osobne sekcje &lt;header&gt; i &lt;footer&gt;.
+          </p>
+          <p>
+            Statusy http: <br />
+            - 100 - poczekaj, za chwilę dostaniesz odpowiedź<br />
+            - 200 OK <br />
+            - 30x - błędny adres ale wiem gdzie cię przekierować <br />
+            - 404 brak zasobu <br />
+            - 50x - bład wewnętrzny serwera <br />
+            W skórcie: <br />
+            - 1xx: hold on <br />
+            - 2xx: here you go <br />
+            - 3xx: go away <br />
+            - 4xx: you fucked up <br />
+            - 5xx: I fucked up <br />
+          </p>
+          <p>
+            backtick/backquote/kopnięty(kopnięty) apostrof: `
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2 id="details">Wiedza w punktach</h2>
+        <article>
+          <h3>Tydzien 2</h3>
+          <p>
+            Strona, która pozwala łatwo i szybko testować html, css i js to
+            <i>codepen.io</i>. Poniżej bezpośredni link do edytora:<br />
+            <a href="https://codepen.io/pen/">https://codepen.io/pen/</a>"
+          </p>
+          <p>
+            Walidator html jest tutaj:
+            <a href="https://validator.w3.org/nu/#textarea"
+              >https://validator.w3.org/nu/#textarea</a
+            >
+          </p>
+          <p>
+            Strona z fajnymi kolorami:
+            <a href="https://coolors.co/generate"
+              >https://coolors.co/generate</a
+            >
+            gdzie za pomocą spacji generuje się nową paletę kolorów.
+          </p>
+        </article>
+        <article>
+          <h3>Tydzien 3</h3>
+          <p>
+            Specyficznosc stylow - style mogą być zdefiniowane na wiele sposobów
+            (w wielu miejscach):<br />
+            <img src="assets/specyficznosc_stylow1.png" /><br />
+            Nazywa się to <i>Specyficznością stylów</i> i w oparciu o to
+            przeglądarka ustala jaki styl będzie de facto zastosowany jeżeli
+            dany element strony podlega pod wiele różnych stylów. <br />
+            Poniżej sposoby na stylowanie wg priorytetów począwszy od
+            najwyższego: <br />
+            - !important - dopisany w ponizszy sposób nadpisuje wszystkie inne
+            style:
+            <code> a { color: darkorange !important; } </code><br />
+            - style - jest to atrybut stosowany do stylowania inline, czyli na
+            poziomie elementu. Przykład zastosowania:
+            <code> &lt;h1 style="color:tomato;"&gt;</code><br />
+            - #name - stylowanie po id obiektu. Przypisujemy do obiektu na
+            stronie jakies ID i potem w stylach możemy się do niego odnieść za
+            pomocą tego ID. Jest tak, że wiele obiektów może mieć takie samo ID,
+            ale nie jest to wskazane i jest to zła praktyka. Przykład
+            zastosowania:<br />
+            Ustawiamy id dla jakiegoś elementu:
+            <code>&lt; h1 id="naglowek1" &gt;</code>
+            <br />
+            W stylach odowłujemy się do niego za pomocą tego ID:
+            <code> #naglowek1 { color: black; } </code>
+            <br />
+            - .name - stylowanie po klasie obiektu. Przypisujemy obiektudo
+            jakiejś klasy obiektów i potem w stylach możemy się do niego odnieść
+            za pomocą tej klasy. Jest tak, że wiele obiektów może być
+            przypisanych do danej klasy i właściwei to jest cel tego podejścia
+            aby grupować obiekty w klasy i przypisywać im grupowo jakieś style.
+            Przykład zastosowania:<br />
+            Ustawiamy klasę dla jakiegoś elementu lub elementów:
+            <code>&lt; h1 class="naglowki" &gt;</code>
+            <code>&lt; h2 class="naglowki" &gt;</code>
+            <br />
+            W stylach odowłujemy się do nich za pomocą tej klasy:
+            <code> .naglowki { color: lemonchiffon; } </code>
+            <br />
+            - element - tutaj definiujemy style na poziomie typu elementu. Np:
+            <br />
+            <code>a { color: yellow; }</code> <br />
+            Można też zagnieżdżać: <br />
+            <code>nav a { color: khaki; } </code> <br />
+            To zagnieżdżenie oznacza, że wszystkie znaczniki typu &lt;a&gt;
+            wewnątrz znaczników typu &lt;nav&gt; będą ostylowane w dany
+            sposób.<br />
+            Przy czym <code>nav a { color: khaki; } </code> jest bardziej
+            specyficzne niż <code>a { color: yellow; }</code> więc ma większy
+            priorytet i to ono determinuje styl tagu &lt;a&gt; wewnątrz
+            &lt;nav&gt; <br />
+            Natomiast z kolei takie coś: <br />
+            <code>html body h1#main-header { color: yellow; } </code> <br />
+            ma przewagę nad: <br />
+            <code> body .section #main-header { color: red; } </code> <br />
+            Wynika to z tej klasyfikacji "medalowej": <br />
+            <img src="assets/specyficznosc_stylow2.png" /> <br />
+            W przypadku kiedy specyficzność jest identyczna, wygrywa styl bliżej
+            elementu, czyli znajdujący się niżej w pliku style.css: <br />
+            <img src="assets/specyficznosc_stylow3.png" /> <br />
+            Podobnie jest w ponizszym przypadku: <br />
+            <img src="assets/specyficznosc_stylow4.png" alt="" /><br />
+            Dobrą praktyką jest jednak unikanie zagnieżdżeń. Należy raczej
+            stosować klasy i to w ten sposób żeby jeden element należał raczej
+            do jednej klasy.
+          </p>
+        </article>
+      </section>
+
+      <footer>
+        Skontaktuj się
+      </footer>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
