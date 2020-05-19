@@ -7,14 +7,14 @@ body {
 p {
   font-style: oblique;
 }
-
+/* 
 nav a {
   color: khaki;
-}
-
+} */
+/* 
 a {
   color: darkorange !important;
-}
+} */
 
 /* 
 do nazywania klas dobrze jest stosowac tzw BEM - Block Element Modifier
@@ -22,21 +22,54 @@ ktory pozwala jednoznacznie okreslic ktorych elementow w dokumencie dotyczy
 dana klasa. Notacja jest nastepujaca:
 Block--Element--Modifier
 */
+/* 
+.header {
+  position: sticky;
+  width: 100%;
+} */
+
+.header--nav {
+  background-color: #599bc2;
+  /* color: white; */
+  border: 2px solid #fff;
+  /* border-radius: 15px; */
+  padding: 15px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav--a {
+  border: 2px solid lemonchiffon;
+  padding: 4px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000100;
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #ddfff7;
+}
 
 .header--h1 {
   /* Parametr auto pozwala na rownomierne rozlozenie elementu z display: block na stronie (wycentrowanie) biorac
      pod uwage jego wymiary i wielkosc marginesow. Nie jest to jednak najlepsza metoda centrowania.
   */
   margin: 15px auto;
+  margin-top: 100px;
   width: 50vw;
   color: #779085;
+  background-color: rgb(222, 255, 219);
+  opacity: 0.4;
+  border: 2px dotted #fffff5;
   font-family: monospace;
 }
 
 .section {
   padding: 10px 0px;
   border-top: 2px solid #dad7cd;
-  width: 90vw;
+  width: 95vw;
   margin: 0px auto;
   position: relative;
 }
@@ -47,7 +80,7 @@ Block--Element--Modifier
      zeby sie zmiescic w jakiejs wielkosci
   */
   box-sizing: border-box;
-  margin: 0px;
+  margin-left: 15px;
   /* color: #242038; */
   color: #a3b18a;
   opacity: 0.4;
@@ -85,7 +118,7 @@ Block--Element--Modifier
     0.4
   ); /* ostatni parametr oznacza opacity */
   /* display: inline-block; */
-  max-width: 1200px;
+  /* max-width: 1200px; */
   /* max-height: 300px; */
   /* overflow mowi co sie ma dziac jezeli zawartosc danego elementu nie miesci sie w nim.
     auto - ustawi csroll, hidden - utnie zawartosc, visible (domyslny) pozostawi tresc wystajaca.
@@ -96,14 +129,6 @@ Block--Element--Modifier
 .article--h3 {
   margin: 0px;
   color: #c15959;
-}
-
-.header--nav {
-  background-color: #599bc2;
-  /* color: white; */
-  border: 2px solid #fff;
-  border-radius: 15px;
-  padding: 15px;
 }
 
 .footer {
