@@ -7,7 +7,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <header>
+    <header class="header--nav">
       <nav>
         <a href="lekcja1.html">lekcja 1&gt;&gt;</a>
         <br />
@@ -16,16 +16,19 @@
     </header>
     <main>
       <header>
-        <h1 style="color: lightcoral;">
-          Piotr Kowalski - Strona-Notatka ze szkolenia WTF Co ten frontend?
+        <h1 class="header--h1">
+          Strona-Notatka ze szkolenia WTF Co ten frontend?
         </h1>
-        <img style="width: 50%;" src="assets/5.png" alt="Obrazek nagłówkowy" />
+        <!-- <img style="width: 50%;" src="assets/5.png" alt="Obrazek nagłówkowy" /> -->
       </header>
 
-      <section>
-        <h2>Sekcja powinna miec nagłówek cztli &lt;header&gt;</h2>
-        <article>
-          <h3>Artykuł tez powinien miec nagłówek czyli &lt;header&gt;</h3>
+      <section class="section">
+        <h2 class="section--h2">
+          Tydzień 1.
+        </h2>
+        <article class="section--lesson-article">
+          Sekcja powinna miec nagłówek cztli &lt;header&gt; Artykuł tez powinien
+          miec nagłówek czyli &lt;header&gt;
           <p>
             Artykuł powinien zawierac paragraf czyli &lt;p&gt;
           </p>
@@ -62,10 +65,9 @@
         </article>
       </section>
 
-      <section>
-        <h2 id="details">Wiedza w punktach</h2>
-        <article>
-          <h3>Tydzien 2</h3>
+      <section class="section">
+        <h2 class="section--h2" id="details">Tydzień 2.</h2>
+        <article class="section--lesson-article">
           <p>
             Strona, która pozwala łatwo i szybko testować html, css i js to
             <i>codepen.io</i>. Poniżej bezpośredni link do edytora:<br />
@@ -85,8 +87,10 @@
             gdzie za pomocą spacji generuje się nową paletę kolorów.
           </p>
         </article>
-        <article>
-          <h3>Tydzien 3</h3>
+      </section>
+      <section class="section">
+        <h2 class="section--h2">Tydzień 3</h2>
+        <article class="section--lesson-article">
           <p>
             Specyficznosc stylow - style mogą być zdefiniowane na wiele sposobów
             (w wielu miejscach):<br />
@@ -156,10 +160,10 @@
         </article>
       </section>
 
-      <section>
-        <h2>Lekcja 4</h2>
-        <article>
-          <h3>GIT</h3>
+      <section class="section">
+        <h2 class="section--h2">Tydzień 4.</h2>
+        <article class="section--lesson-article">
+          <h3 class="article--h3">GIT</h3>
           <p>
             <code>git config --global user.name "Piotr Kowalski"</code><br />
             <code>git config --global user.email kowalskipiotr79@gmail.com</code
@@ -197,7 +201,7 @@
         </article>
       </section>
 
-      <footer>
+      <footer class="footer">
         Skontaktuj się
       </footer>
     </main>

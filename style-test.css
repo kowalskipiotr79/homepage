@@ -1,0 +1,10 @@
+.test {
+  color: #000;
+  width: 20vh;
+  height: 20vh;
+  margin: 200px auto;
+  border: 10px solid;
+  border-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+}

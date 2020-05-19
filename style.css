@@ -1,14 +1,18 @@
 h1 {
-  color: brown;
+  color: rgb(248, 215, 215);
 }
 body {
-  background-color: #4fd46c;
+  background-color: #a3b18a;
 }
 p {
   font-style: oblique;
 }
-section {
-  padding: 100px;
+
+.section {
+  padding: 10px 0px;
+  border-top: 2px solid #dad7cd;
+  width: 90vw;
+  margin: 0px auto;
 }
 
 nav a {
@@ -17,4 +21,84 @@ nav a {
 
 a {
   color: darkorange !important;
+}
+
+/* 
+do nazywania klas dobrze jest stosowac tzw BEM - Block Element Modifier
+ktory pozwala jednoznacznie okreslic ktorych elementow w dokumencie dotyczy
+dana klasa. Notacja jest nastepujaca:
+Block--Element--Modifier
+*/
+
+.header--h1 {
+  /* Parametr auto pozwala na rownomierne rozlozenie elementu z display: block na stronie (wycentrowanie) biorac
+     pod uwage jego wymiary i wielkosc marginesow. Nie jest to jednak najlepsza metoda centrowania.
+  */
+  margin: 15px auto;
+  width: 50vw;
+  color: #779085;
+  font-family: monospace;
+}
+
+.section--h2 {
+  box-sizing: border-box; /* dzieki temu obiekt na zewnatrz zachowuje wymiary a paddingi nie powiekszaja go*/
+  margin: 0px;
+  color: #242038;
+  border: 2px dotted #fffff5;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  padding-top: 50px;
+  padding-left: 15px;
+  background-color: #deffdb;
+  /* display: inline-block pozwala aby elementy inline-owe (display: inline) mogly miec
+     wlasnosci elementow blokowych (display: block) i odwrotnie tez.
+     Dzieki temu mozna rowniez np. ustawic w jednej linii obok siebie element h2 z elementem article.
+     Normalnie poniewaz h2 i article sa blokowe (display: block), to article schodzil 
+     by ponizej h2. 
+     Natomiast elementy typu inline nie maja mozliwosci definiowania np. swoich wymiarow.
+     Kiedy jednak nadamy im wlasnosc inline-block zyskuja taka mozliwosc.
+  */
+  display: inline-block;
+}
+
+.article--h3 {
+  margin: 0px;
+  color: #c15959;
+}
+
+.section--lesson-article {
+  border: 2px solid;
+  border-color: #dad7cd;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0px 0px 0px;
+  /* background-color: #59c3c3; */
+  background-color: rgba(
+    89,
+    195,
+    195,
+    0.4
+  ); /* ostatni parametr oznacza opacity */
+  display: inline-block;
+  /* overflow-wrap: normal; */
+  max-width: 1200px;
+  /* max-height: 300px; */
+  overflow: auto;
+}
+
+.header--nav {
+  background-color: #599bc2;
+  /* color: white; */
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.footer {
+  background-color: #599bc2;
+  /* color: white; */
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 15px;
 }
