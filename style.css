@@ -8,13 +8,6 @@ p {
   font-style: oblique;
 }
 
-.section {
-  padding: 10px 0px;
-  border-top: 2px solid #dad7cd;
-  width: 90vw;
-  margin: 0px auto;
-}
-
 nav a {
   color: khaki;
 }
@@ -40,17 +33,32 @@ Block--Element--Modifier
   font-family: monospace;
 }
 
+.section {
+  padding: 10px 0px;
+  border-top: 2px solid #dad7cd;
+  width: 90vw;
+  margin: 0px auto;
+  position: relative;
+}
+
 .section--h2 {
-  box-sizing: border-box; /* dzieki temu obiekt na zewnatrz zachowuje wymiary a paddingi nie powiekszaja go*/
+  /* dzieki temu obiekt na zewnatrz zachowuje wymiary a paddingi nie powiekszaja go
+     wiec nie trzeba sie martwic o przeliczanie i sumowanie ze soba borderow i paddingow
+     zeby sie zmiescic w jakiejs wielkosci
+  */
+  box-sizing: border-box;
   margin: 0px;
-  color: #242038;
+  /* color: #242038; */
+  color: #a3b18a;
+  opacity: 0.4;
   border: 2px dotted #fffff5;
   border-radius: 50%;
   width: 140px;
   height: 140px;
   padding-top: 50px;
   padding-left: 15px;
-  background-color: #deffdb;
+  background-color: rgb(222, 255, 219);
+  /* background-color: rgba(222, 255, 219, 0.4); */
   /* display: inline-block pozwala aby elementy inline-owe (display: inline) mogly miec
      wlasnosci elementow blokowych (display: block) i odwrotnie tez.
      Dzieki temu mozna rowniez np. ustawic w jednej linii obok siebie element h2 z elementem article.
@@ -59,12 +67,9 @@ Block--Element--Modifier
      Natomiast elementy typu inline nie maja mozliwosci definiowania np. swoich wymiarow.
      Kiedy jednak nadamy im wlasnosc inline-block zyskuja taka mozliwosc.
   */
-  display: inline-block;
-}
-
-.article--h3 {
-  margin: 0px;
-  color: #c15959;
+  /* display: inline-block; */
+  position: sticky;
+  top: 20px;
 }
 
 .section--lesson-article {
@@ -73,18 +78,24 @@ Block--Element--Modifier
   border-radius: 15px;
   padding: 10px;
   margin: 10px 0px 0px 0px;
-  /* background-color: #59c3c3; */
   background-color: rgba(
     89,
     195,
     195,
     0.4
   ); /* ostatni parametr oznacza opacity */
-  display: inline-block;
-  /* overflow-wrap: normal; */
+  /* display: inline-block; */
   max-width: 1200px;
   /* max-height: 300px; */
+  /* overflow mowi co sie ma dziac jezeli zawartosc danego elementu nie miesci sie w nim.
+    auto - ustawi csroll, hidden - utnie zawartosc, visible (domyslny) pozostawi tresc wystajaca.
+    */
   overflow: auto;
+}
+
+.article--h3 {
+  margin: 0px;
+  color: #c15959;
 }
 
 .header--nav {
