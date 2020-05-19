@@ -3,6 +3,8 @@ h1 {
 }
 body {
   background-color: #a3b18a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 p {
   font-style: oblique;
@@ -34,10 +36,20 @@ Block--Element--Modifier
   border: 2px solid #fff;
   /* border-radius: 15px; */
   padding: 15px;
+  /* Dzieki position: fixed element bedzie ciagle w jednym miejscu na stronie.
+     Mozna tego uzyc np. dla menu, ktore bez wzgledu na przewijanie strony
+     ciagle bedzie w jednym miejscu np. na gorze strony.
+     Zeby takie menu ustawic idelanie na gorze i przylegajace do lewej to trzeba
+     ustawic top i left na 0px
+  */
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
+  /* aby rzeczy z ustawionym opacity na inne niz 0 nie byly widoczne podczas przewijania
+  pod menu, trzeba menu wycignac na wierzch za pomoca parametru z-index. Zapewnia on to,
+  ze element z najwieksza wartoscia bedzie naj wierzchu, czyli nic go nie przykryje.
+  */
   z-index: 1000;
 }
 
@@ -48,7 +60,6 @@ Block--Element--Modifier
   text-decoration: none;
   color: #000100;
   font-size: large;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #ddfff7;
 }
 
@@ -71,6 +82,12 @@ Block--Element--Modifier
   border-top: 2px solid #dad7cd;
   width: 95vw;
   margin: 0px auto;
+  margin-bottom: 10px;
+  /* position: relative pozwala aby dzieci tego elementu mogly sie ustawiac wzgledem niego
+  rowniez za pomoca wlasnosci position: static (domyslna), absolute (na gorze), fixed (na stale
+  w jednym miejscu), sticky (przyklejone - podczas przewijania rodzica element ciagle jest 
+  widoczny).
+  */
   position: relative;
 }
 
@@ -80,18 +97,19 @@ Block--Element--Modifier
      zeby sie zmiescic w jakiejs wielkosci
   */
   box-sizing: border-box;
-  margin-left: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
   /* color: #242038; */
   color: #a3b18a;
   opacity: 0.4;
   border: 2px dotted #fffff5;
   border-radius: 50%;
-  width: 140px;
-  height: 140px;
-  padding-top: 50px;
-  padding-left: 15px;
+  width: 80px;
+  height: 80px;
+  padding-top: 28px;
   background-color: rgb(222, 255, 219);
-  /* background-color: rgba(222, 255, 219, 0.4); */
+  font-size: small;
+  text-align: center;
   /* display: inline-block pozwala aby elementy inline-owe (display: inline) mogly miec
      wlasnosci elementow blokowych (display: block) i odwrotnie tez.
      Dzieki temu mozna rowniez np. ustawic w jednej linii obok siebie element h2 z elementem article.
@@ -101,8 +119,15 @@ Block--Element--Modifier
      Kiedy jednak nadamy im wlasnosc inline-block zyskuja taka mozliwosc.
   */
   /* display: inline-block; */
+  /* pozwala aby element przykleil sie do elementu rodzica i np. ten naglowek h2 podczas
+   przewijania sekcji ktora jest jego rodzicem bedzie ciagle widoczny. Jednak aby to dzialalo 
+   konieczne jest ustawienie parametru top ponizej*/
   position: sticky;
-  top: 20px;
+  top: 58px;
+  /* wlasnosc float pozwala na ustawienie oplywania elementu, a wiec inne elementy bedace
+    w jego sasiedztwie moga go oplywac np. z lewej lub prawej strony 
+  */
+  float: left;
 }
 
 .section--lesson-article {
@@ -124,6 +149,7 @@ Block--Element--Modifier
     auto - ustawi csroll, hidden - utnie zawartosc, visible (domyslny) pozostawi tresc wystajaca.
     */
   overflow: auto;
+  text-align: justify;
 }
 
 .article--h3 {
