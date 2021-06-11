@@ -8,37 +8,37 @@
   </head>
   <body>
     <header class="header">
-      <nav class="header--nav">
+      <nav class="nawigacja-gora">
         <a
-          class="nav--a"
+          class="nawigacja-gora__a"
           onmouseover="removeBackgroundColor(this);"
           href="#tydzien1"
           >Tydzień 1.</a
         >
         <a
-          class="nav--a"
+          class="nawigacja-gora__a"
           onmouseover="removeBackgroundColor(this);"
           href="#tydzien2"
           >Tydzień 2.</a
         >
-        <a class="nav--a" href="#tydzien3">Tydzień 3.</a>
-        <a class="nav--a" href="#tydzien4">Tydzień 4.</a>
-        <a class="nav--a" href="#tydzien5">Tydzień 5.</a>
+        <a class="nawigacja-gora__a" href="#tydzien3">Tydzień 3.</a>
+        <a class="nawigacja-gora__a" href="#tydzien4">Tydzień 4.</a>
+        <a class="nawigacja-gora__a" href="#tydzien5">Tydzień 5.</a>
       </nav>
     </header>
     <main>
       <header>
-        <h1 class="header--h1">
+        <h1 class="naglowek-strony">
           Strona-Notatka ze szkolenia WTF Co ten frontend?
         </h1>
         <!-- <img style="width: 50%;" src="assets/5.png" alt="Obrazek nagłówkowy" /> -->
       </header>
 
-      <section class="section" id="tydzien1">
-        <h2 class="section--h2">
+      <section class="notatka-tydzien" id="tydzien1">
+        <div class="notatka-tydzien__plywajacy-nr-tygodnia">
           Tydzień 1.
-        </h2>
-        <article class="section--lesson-article">
+        </div>
+        <article class="notatka-tydzien__lekcja">
           Sekcja powinna miec nagłówek cztli &lt;header&gt; Artykuł tez powinien
           miec nagłówek czyli &lt;header&gt;
           <p>
@@ -77,9 +77,9 @@
         </article>
       </section>
 
-      <section class="section" id="tydzien2">
-        <h2 class="section--h2">Tydzień 2.</h2>
-        <article class="section--lesson-article">
+      <section class="notatka-tydzien" id="tydzien2">
+        <div class="notatka-tydzien__plywajacy-nr-tygodnia">Tydzień 2.</div>
+        <article class="notatka-tydzien__lekcja">
           <p>
             Strona, która pozwala łatwo i szybko testować html, css i js to
             <i>codepen.io</i>. Poniżej bezpośredni link do edytora:<br />
@@ -100,9 +100,9 @@
           </p>
         </article>
       </section>
-      <section class="section" id="tydzien3">
-        <h2 class="section--h2">Tydzień 3.</h2>
-        <article class="section--lesson-article">
+      <section class="notatka-tydzien" id="tydzien3">
+        <div class="notatka-tydzien__plywajacy-nr-tygodnia">Tydzień 3.</div>
+        <article class="notatka-tydzien__lekcja">
           <p>
             Specyficznosc stylow - style mogą być zdefiniowane na wiele sposobów
             (w wielu miejscach):<br />
@@ -172,10 +172,10 @@
         </article>
       </section>
 
-      <section class="section" id="tydzien4">
-        <h2 class="section--h2">Tydzień 4.</h2>
-        <article class="section--lesson-article">
-          <h3 class="article--h3">GIT</h3>
+      <section class="notatka-tydzien" id="tydzien4">
+        <div class="notatka-tydzien__plywajacy-nr-tygodnia">Tydzień 4.</div>
+        <article class="notatka-tydzien__lekcja">
+          <h3 class="notatka-tydzien__naglowek-lekcji">GIT</h3>
           <p>
             <code>git config --global user.name "Piotr Kowalski"</code><br />
             <code>git config --global user.email kowalskipiotr79@gmail.com</code
@@ -212,7 +212,7 @@
           </p>
             Kopia zdalnego archiwum na dysk lokalny</br>
             <code>git clone https://github.com/kowalskipiotr79/homepage.git</code>
-          <h3 class="article--h3">Pozostale</h3>
+          <h3 class="notatka-tydzien__naglowek-lekcji">Pozostale</h3>
           <p>
             Strona gdzie można sprawdzać kompatybilność danej własności css z
             przeglądarkami: <br />
@@ -223,7 +223,7 @@
         </article>
       </section>
 
-      <footer class="footer">
+      <footer class="stopka-strony">
         Skontaktuj się
       </footer>
     </main>
